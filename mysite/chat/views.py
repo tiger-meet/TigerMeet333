@@ -12,3 +12,6 @@ def room(request, room_name):
         'room_name_json': mark_safe(json.dumps(room_name)),
         'username': mark_safe(json.dumps(request.user.username)),
     })
+
+def about(request):
+    return render(request, 'chat/about.html', {})
