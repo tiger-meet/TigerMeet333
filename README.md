@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Details](#details)
-* [Setup (Python 3)](#setup)
+* [Setup](#setup)
 * [Try](#try)
 
 ## Details
