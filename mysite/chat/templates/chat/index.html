@@ -1,5 +1,7 @@
 <!-- chat/templates/chat/index.html -->
 
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,7 @@
 
   <!-- Setup -->
   <title>TigerMeet</title>
-  <link rel="icon" type="image/png" href="../../static/cub.png">
+  <link rel="icon" type="image/png" href="{% static 'cub.png' %}">
   
   <!-- Semantic UI -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -25,9 +27,9 @@
 <body>
 
 <!-- Following Menu -->
-<div class="ui pointing menu">
+<div class="ui pointing menu" style="margin-bottom: 0;">
   <a class="item" href="/">
-    <img src="../../static/cub.png">
+    <img src="{% static 'cub.png' %}">
   </a>
   <div class="ui simple dropdown item">
     Chatrooms <i class="dropdown icon"></i>
@@ -50,11 +52,47 @@
   </div>
 </div>
 
-<h1>TigerMeet</h1>
+<div class="ui bottom attached segment pushable" style="margin-bottom: 0;">
+  <div class="ui visible inverted left vertical sidebar menu">
+    <a class="item">
+      <i class="home icon" href="/sports"></i>
+      Sports
+    </a>
+    <a class="item" href="/workingout">
+      <i class="block layout icon"></i>
+      Working Out
+    </a>
+    <a class="item" href="/videogames">
+      <i class="smile icon"></i>
+      Video Games
+    </a>
+    <a class="item" href="/transportation">
+      <i class="calendar icon"></i>
+      Transportation
+    </a>
+    <a class="item" href="/problemsetgroups">
+      <i class="calendar icon"></i>
+      Problem Set Groups
+    </a>
+    <a class="item" href="/miscellaneous">
+      <i class="calendar icon"></i>
+      Miscellaneous
+    </a>
+  </div>
 
-What chat room would you like to enter?<br/>
-<input id="room-name-input" type="text" size="100"/><br/>
-<input id="room-name-submit" type="button" value="Enter"/>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <h1>TigerMeet</h1>
+
+      What chat room would you like to enter?<br/>
+      <div class="ui action input">
+        <input id="room-name-input" type="text"/>
+        <button id="room-name-submit" class="ui button">Search</button>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <script>
     document.querySelector('#room-name-input').focus();
