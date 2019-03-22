@@ -4,11 +4,6 @@ $("#profile-img").click(function() {
 	$("#status-options").toggleClass("active");
 });
 
-$(".expand-button").click(function() {
-  $("#profile").toggleClass("expanded");
-	$("#contacts").toggleClass("expanded");
-});
-
 $("#status-options ul li").click(function() {
 	$("#profile-img").removeClass();
 	$("#status-online").removeClass("active");
@@ -38,9 +33,8 @@ function newMessage()
 	if($.trim(message) == '') {
 		return false;
 	}
-	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
-	$('.message-input input').val(null);
-	$('.contact.active .preview').html('<span>You: </span>' + message);
+	$("<li class='sent'><img src='/static/rpark.jpg' alt='' /><p>" + message + "</p></li>").appendTo($(".messages ul"));
+	$(".message-input input").val(null);
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 };
 
