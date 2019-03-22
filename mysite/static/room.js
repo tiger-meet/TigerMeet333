@@ -33,8 +33,8 @@ function newMessage()
 	if($.trim(message) == '') {
 		return false;
 	}
-	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
-	$('.message-input input').val(null);
+	$("<li class='sent'><img src='/static/rpark.jpg' alt='' /><p>" + message + "</p></li>").appendTo($(".messages ul"));
+	$(".message-input input").val(null);
 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
 };
 
