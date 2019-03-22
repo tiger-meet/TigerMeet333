@@ -3,12 +3,10 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #27ae60;
-  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  background-color: orange;
   font-size: 1em;
   letter-spacing: 0.1px;
   color: #32465a;
-  text-rendering: optimizeLegibility;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   -webkit-font-smoothing: antialiased;
 }
@@ -28,14 +26,13 @@ body {
 }
 #frame #sidepanel {
   float: left;
-  min-width: 280px;
-  max-width: 340px;
-  width: 40%;
+  /* min-width: 200px;
+  max-width: 200px; */
+  width: 20%;
   height: 100%;
   background: #2c3e50;
   color: #f5f5f5;
   overflow: hidden;
-  position: relative;
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel {
@@ -54,21 +51,6 @@ body {
     padding: 5px 0 0 0;
     background: #32465a;
   }
-}
-#frame #sidepanel #profile.expanded .wrap {
-  height: 210px;
-  line-height: initial;
-}
-#frame #sidepanel #profile.expanded .wrap p {
-  margin-top: 20px;
-}
-#frame #sidepanel #profile.expanded .wrap i.expand-button {
-  -moz-transform: scaleY(-1);
-  -o-transform: scaleY(-1);
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
 }
 #frame #sidepanel #profile .wrap {
   height: 65px;
@@ -112,27 +94,12 @@ body {
 #frame #sidepanel #profile .wrap img.busy {
   border: 2px solid #e74c3c;
 }
-#frame #sidepanel #profile .wrap img.offline {
-  border: 2px solid #95a5a6;
-}
 #frame #sidepanel #profile .wrap p {
   float: left;
   margin-left: 15px;
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel #profile .wrap p {
-    display: none;
-  }
-}
-#frame #sidepanel #profile .wrap i.expand-button {
-  float: right;
-  margin-top: 23px;
-  font-size: 0.8em;
-  cursor: pointer;
-  color: #435f7a;
-}
-@media screen and (max-width: 735px) {
-  #frame #sidepanel #profile .wrap i.expand-button {
     display: none;
   }
 }
@@ -254,74 +221,6 @@ body {
 #frame #sidepanel #profile .wrap #status-options ul li#status-busy.active span.status-circle:before {
   border: 1px solid #e74c3c;
 }
-#frame #sidepanel #profile .wrap #status-options ul li#status-offline span.status-circle {
-  background: #95a5a6;
-}
-#frame #sidepanel #profile .wrap #status-options ul li#status-offline.active span.status-circle:before {
-  border: 1px solid #95a5a6;
-}
-#frame #sidepanel #profile .wrap #expanded {
-  padding: 100px 0 0 0;
-  display: block;
-  line-height: initial !important;
-}
-#frame #sidepanel #profile .wrap #expanded label {
-  float: left;
-  clear: both;
-  margin: 0 8px 5px 0;
-  padding: 5px 0;
-}
-#frame #sidepanel #profile .wrap #expanded input {
-  border: none;
-  margin-bottom: 6px;
-  background: #32465a;
-  border-radius: 3px;
-  color: #f5f5f5;
-  padding: 7px;
-  width: calc(100% - 43px);
-}
-#frame #sidepanel #profile .wrap #expanded input:focus {
-  outline: none;
-  background: #435f7a;
-}
-#frame #sidepanel #search {
-  border-top: 1px solid #32465a;
-  border-bottom: 1px solid #32465a;
-  font-weight: 300;
-}
-@media screen and (max-width: 735px) {
-  #frame #sidepanel #search {
-    display: none;
-  }
-}
-#frame #sidepanel #search label {
-  position: absolute;
-  margin: 10px 0 0 20px;
-}
-#frame #sidepanel #search input {
-  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
-  padding: 10px 0 10px 46px;
-  width: calc(100% - 25px);
-  border: none;
-  background: #32465a;
-  color: #f5f5f5;
-}
-#frame #sidepanel #search input:focus {
-  outline: none;
-  background: #435f7a;
-}
-#frame #sidepanel #search input::-webkit-input-placeholder {
-  color: #f5f5f5;
-}
-#frame #sidepanel #search input::-moz-placeholder {
-  color: #f5f5f5;
-}
-#frame #sidepanel #search input:-ms-input-placeholder {
-  color: #f5f5f5;
-}
-#frame #sidepanel #search input:-moz-placeholder {
-  color: #f5f5f5;
-}
 #frame #sidepanel #contacts {
   height: calc(100% - 177px);
   overflow-y: scroll;
@@ -337,9 +236,6 @@ body {
     display: none;
   }
 }
-#frame #sidepanel #contacts.expanded {
-  height: calc(100% - 334px);
-}
 #frame #sidepanel #contacts::-webkit-scrollbar {
   width: 8px;
   background: #2c3e50;
@@ -349,7 +245,7 @@ body {
 }
 #frame #sidepanel #contacts ul li.contact {
   position: relative;
-  padding: 10px 0 15px 0;
+  padding: 20px 0 20px 0;
   font-size: 0.9em;
   cursor: pointer;
 }
@@ -360,13 +256,6 @@ body {
 }
 #frame #sidepanel #contacts ul li.contact:hover {
   background: #32465a;
-}
-#frame #sidepanel #contacts ul li.contact.active {
-  background: #32465a;
-  border-right: 5px solid #435f7a;
-}
-#frame #sidepanel #contacts ul li.contact.active span.contact-status {
-  border: 2px solid #32465a !important;
 }
 #frame #sidepanel #contacts ul li.contact .wrap {
   width: 88%;
@@ -419,7 +308,7 @@ body {
 #frame #sidepanel #contacts ul li.contact .wrap .meta .name {
   font-weight: 600;
 }
-#frame #sidepanel #contacts ul li.contact .wrap .meta .preview {
+#frame #sidepanel #contacts ul li.contact .wrap .meta {
   margin: 5px 0 0 0;
   padding: 0 0 1px;
   font-weight: 400;
@@ -431,7 +320,7 @@ body {
   -webkit-transition: 1s all ease;
   transition: 1s all ease;
 }
-#frame #sidepanel #contacts ul li.contact .wrap .meta .preview span {
+#frame #sidepanel #contacts ul li.contact .wrap .meta span {
   position: initial;
   border-radius: initial;
   background: none;
@@ -440,75 +329,12 @@ body {
   margin: 0 0 0 1px;
   opacity: .5;
 }
-#frame #sidepanel #bottom-bar {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-#frame #sidepanel #bottom-bar button {
-  float: left;
-  border: none;
-  width: 50%;
-  padding: 10px 0;
-  background: #32465a;
-  color: #f5f5f5;
-  cursor: pointer;
-  font-size: 0.85em;
-  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
-}
-@media screen and (max-width: 735px) {
-  #frame #sidepanel #bottom-bar button {
-    float: none;
-    width: 100%;
-    padding: 15px 0;
-  }
-}
-#frame #sidepanel #bottom-bar button:focus {
-  outline: none;
-}
-#frame #sidepanel #bottom-bar button:nth-child(1) {
-  border-right: 1px solid #2c3e50;
-}
-@media screen and (max-width: 735px) {
-  #frame #sidepanel #bottom-bar button:nth-child(1) {
-    border-right: none;
-    border-bottom: 1px solid #2c3e50;
-  }
-}
-#frame #sidepanel #bottom-bar button:hover {
-  background: #435f7a;
-}
-#frame #sidepanel #bottom-bar button i {
-  margin-right: 3px;
-  font-size: 1em;
-}
-@media screen and (max-width: 735px) {
-  #frame #sidepanel #bottom-bar button i {
-    font-size: 1.3em;
-  }
-}
-@media screen and (max-width: 735px) {
-  #frame #sidepanel #bottom-bar button span {
-    display: none;
-  }
-}
 #frame .content {
   float: right;
-  width: 60%;
+  width: 80%;
   height: 100%;
   overflow: hidden;
   position: relative;
-}
-@media screen and (max-width: 735px) {
-  #frame .content {
-    width: calc(100% - 100px);
-    min-width: 300px !important;
-  }
-}
-@media screen and (min-width: 900px) {
-  #frame .content {
-    width: calc(100% - 340px);
-  }
 }
 #frame .content .contact-profile {
   width: 100%;
@@ -516,29 +342,7 @@ body {
   line-height: 80px;
   background: #f5f5f5;
 }
-#frame .content .contact-profile img {
-  width: 60px;
-  border-radius: 50%;
-  float: left;
-  margin: 9px 12px 0 9px;
-}
-#frame .content .contact-profile p {
-  float: left;
-  font-size: 18px;
-}
-#frame .content .contact-profile .social-media {
-  float: right;
-}
-#frame .content .contact-profile .social-media i {
-  margin-left: 14px;
-  cursor: pointer;
-}
-#frame .content .contact-profile .social-media i:nth-last-child(1) {
-  margin-right: 20px;
-}
-#frame .content .contact-profile .social-media i:hover {
-  color: #435f7a;
-}
+
 #frame .content .messages {
   height: auto;
   min-height: calc(100% - 93px);
@@ -563,27 +367,13 @@ body {
   display: inline-block;
   clear: both;
   float: left;
-  margin: 15px 15px 5px 15px;
+  padding: 15px 15px 5px 15px;
   width: calc(100% - 25px);
   font-size: 0.9em;
+  border: solid 1px lightgray;
 }
 #frame .content .messages ul li:nth-last-child(1) {
   margin-bottom: 20px;
-}
-#frame .content .messages ul li.sent img {
-  margin: 6px 8px 0 0;
-}
-#frame .content .messages ul li.sent p {
-  background: #435f7a;
-  color: #f5f5f5;
-}
-#frame .content .messages ul li.replies img {
-  float: right;
-  margin: 6px 0 0 8px;
-}
-#frame .content .messages ul li.replies p {
-  background: #f5f5f5;
-  float: right;
 }
 #frame .content .messages ul li img {
   width: 42px;
@@ -608,67 +398,4 @@ body {
   bottom: 0;
   width: 100%;
   z-index: 99;
-}
-#frame .content .message-input .wrap {
-  position: relative;
-}
-#frame .content .message-input .wrap input {
-  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
-  float: left;
-  border: none;
-  width: calc(100% - 90px);
-  padding: 11px 32px 10px 8px;
-  font-size: 1.8em;
-  color: #32465a;
-}
-@media screen and (max-width: 735px) {
-  #frame .content .message-input .wrap input {
-    padding: 15px 32px 16px 8px;
-  }
-}
-#frame .content .message-input .wrap input:focus {
-  outline: none;
-}
-#frame .content .message-input .wrap .attachment {
-  position: absolute;
-  right: 60px;
-  z-index: 4;
-  margin-top: 10px;
-  font-size: 1.8em;
-  color: #435f7a;
-  opacity: .5;
-  cursor: pointer;
-}
-@media screen and (max-width: 735px) {
-  #frame .content .message-input .wrap .attachment {
-    margin-top: 19px;
-    right: 65px;
-  }
-}
-#frame .content .message-input .wrap .attachment:hover {
-  opacity: 1;
-}
-#frame .content .message-input .wrap button {
-  float: right;
-  border: none;
-  width: 50px;
-  padding: 12px 0;
-  cursor: pointer;
-  background: #32465a;
-  color: #f5f5f5;
-}
-@media screen and (max-width: 735px) {
-  #frame .content .message-input .wrap button {
-    padding: 21px 0;
-  }
-}
-#frame .content .message-input .wrap button:hover {
-  background: #435f7a;
-}
-#frame .content .message-input .wrap button:focus {
-  outline: none;
-}
-
-.fa {
-  font-size: 1.5em !important;
 }
