@@ -16,10 +16,10 @@ $ git clone "https://github.com/tiger-meet/TigerMeet333"
 $ cd TigerMeet333
 $ python -m venv venv
 $ . venv/bin/activate (OR . venv/Scripts/activate on Windows)
-(venv) $ pip install --upgrade pip
+(venv) $ python -m pip install --upgrade pip
 (venv) $ pip install -r requirements.txt
 ```
-To run development server:
+To run development server in the project:
 ```
 (venv) $ python manage.py runserver
 ```
